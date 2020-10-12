@@ -1,0 +1,36 @@
+debut minMax
+    declaration VARIABLES LOCALES
+        var min :N <- 0
+        var max :N <- 0
+        var entree : N <- 0
+        var i :N <- 0
+        var iPremier :N <- 0
+        var iDernier :N <- 0
+    fin declaration
+
+    saisir entree
+    i <- 1
+    si entree != 100
+        ALORS
+        max <- entree
+        min <- entree
+        saisir entree
+
+        tant que entree != 100
+            i <- i+1
+            si entree > max
+                ALORS 
+                max <- entree
+            finsi
+
+            si entree < min
+                ALORS 
+                min <- entree
+            finsi
+            saisir entree
+        fin tant que
+
+        Afficher "le plus grand nombre est", max
+        Afficher "le plus petit nombre est", min
+    finsi
+fin minMax

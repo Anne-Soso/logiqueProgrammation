@@ -1,0 +1,24 @@
+début sommeSuite
+    déclaration VARIABLES LOCALES
+        var entree1 :N <- 0
+        var entree2 :N <- 0
+        var sommme :N <- 0
+        var memory :N <- 0
+        var cpt :N <- 0
+    fin VARIABLES LOCALES
+
+    saisir entree1
+    saisir entree2
+    Afficher "La somme des nombres compris entre", entree1, "et", entree2, "est de"
+    si entree1 < entree2
+        ALORS
+        memory <- entree1
+        entree1 <- entree2
+        entree2 <- memory
+    finsi
+    POUR cpt ALLANT de entree1 à entree2
+        somme <- somme + cpt
+    cpt suivant
+    Afficher somme
+
+fin sommeSuite

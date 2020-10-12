@@ -1,0 +1,37 @@
+debut Decouvrir
+declaration Variables Locales
+    var a :N <-0
+    var saisie :N <- 0
+    var essais :N <- 3
+fin Variables Locales
+
+a <- aleatoire(100)
+
+Afficher "Entrez un nombre entre 0 et 100 afin de trouver notre nombre secret, vous avez trois essais en tout"
+Afficher 'essais restants :', essais
+saisir saisie
+essais <- essais-1
+
+
+tant que saisie != a && essais > 0 
+    si a < saisie
+        ALORS
+        Afficher "Plus petit"
+        SINON
+        Afficher "Plus grand"
+    finsi 
+    Afficher 'essais restants:', essais
+    saisir saisie
+    essais <- essais-1
+
+fin tant que
+
+si saisie = a
+    ALORS
+    Afficher "Trouvé !"
+    SINON 
+    Afficher "Perdu !"
+finsi
+
+
+fin Decouvrir
