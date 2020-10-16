@@ -1,3 +1,30 @@
 debut sousChaine
+    declaration variables locales
+        var depart :N <- 0
+        var fin :N <- 0
+        var textSrc :T <- ""
+        var subString :T <- ""
+        var srcLen :N <-0
 
+    fin variables locales
+
+    Afficher "Saisir un texte"
+    saisir textSrc
+    srcLen <- longueur(textSrc)
+
+    Afficher "Saisir l'indice du premier caractère"
+    saisir depart
+
+    Afficher "Saisir l'indice du dernier caractère"
+    saisir fin
+
+    si depart < fin && fin =< srcLen
+        ALORS
+            pour cpt allant de depart à fin
+                subString <- subString + caract(textSrc, cpt)
+            cpt suivant
+            Afficher subString
+        SINON
+            Afficher "Erreur"
+    finsi
 fin sousChaine
