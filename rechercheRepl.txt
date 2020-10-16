@@ -3,9 +3,11 @@ déclaration Variables Locales
 
     var texteSrc :T <- ""
     var recherche :T <- ""
+    var replace :T <- ""
 
     var srcLen :N <- 0
     var rechLen :N <- 0
+    var replLen :N <- 0
 
     var cpt :N <- 0
     var occur :N <- 0
@@ -20,22 +22,19 @@ saisir texteSrc
 Afficher "Saisir un texte à chercher"
 saisir recherche
 
+Afficher "Saisir le texte de remplacement"
+saisir replace
+
 srcLen <- longueur(texteSrc)
 rechLen <- longueur(recherche)
+replLen <- longueur (replace)
 
 
 tant que cpt =< srcLen
     si sousChaine(texteSrc,cpt,rechLen+1)=recherche
             AlORS
-                si occur = 0
-                    ALORS
-                        indicePr <- cpt
-                        indiceDer <- cpt
-                    SINON 
-                        indiceDer <- cpt
-                finsi
-                occur <- occur + 1
-                cpt <- cpt + rechLen
+                texteSrc <- sousChaine(texteSrc, 1, cpt) (+) replace (+) sousChaine(texteSrc,cpt+replLen,srcLen+1) 
+                cpt <- cpt + replLen
             SINON
                 cpt <- cpt+1
             
