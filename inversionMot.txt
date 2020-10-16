@@ -1,0 +1,12 @@
+debut inversionMot
+    declaration variables locales
+        var texteSource :T <- ""
+        var srcLen :N <- 0
+        var newText :T <- ""
+        var cpt :T
+    fin variables locales
+
+    pour 
+
+
+fin inversionMot
