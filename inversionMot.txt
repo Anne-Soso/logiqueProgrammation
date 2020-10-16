@@ -15,8 +15,8 @@ debut inversionMot
     pour cpt allant de 1 à srcLen
         si caract(texteSource,cpt) = " " 
             ALORS
-                newText <- sousChaine(texteSource,indiceLastSp+1,cpt) (+) newText
-                indiceLastSp <- cpt
+                newText <- sousChaine(texteSource,indiceLastSp+1,cpt) (+) " " (+) newText
+                indiceLastSp <- cpt 
         finsi
 
     cpt suivant
