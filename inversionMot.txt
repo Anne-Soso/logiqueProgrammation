@@ -3,10 +3,24 @@ debut inversionMot
         var texteSource :T <- ""
         var srcLen :N <- 0
         var newText :T <- ""
-        var cpt :T
+        var cpt :N <- 0
+        var indiceLastSp :N <- 0
     fin variables locales
 
-    pour 
+    Afficher "Saisir un texte dont il faudrait inverser les mots"
+    saisir texteSource
+    srcLen <- longueur(texteSource)
+
+    
+    pour cpt allant de 1 à srcLen
+        si caract(texteSource,cpt) = " " 
+            ALORS
+                newText <- sousChaine(texteSource,indiceLastSp+1,cpt) (+) newText
+                indiceLastSp <- cpt
+        finsi
+
+    cpt suivant
+    Afficher newText
 
 
 fin inversionMot
