@@ -4,7 +4,8 @@ debut sousChaine
         var fin :N <- 0
         var textSrc :T <- ""
         var subString :T <- ""
-        var srcLen :N <-0
+        var srcLen :N <- 0
+        var cpt :N <- 0
 
     fin variables locales
 
