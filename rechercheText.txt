@@ -1,0 +1,54 @@
+début RechercheText
+déclaration Variables Locales
+
+    var texteSrc :T <- ""
+    var recherche :T <- ""
+
+    var srcLen :N <- 0
+    var rechLen :N <- 0
+
+    var cpt :N <- 0
+    var occur :N <- 0
+    var indicePr :N <- 0
+    var indiceDer :N <- 0
+
+fin Variables locales
+
+Afficher "Saisir un texte source"
+saisir texteSrc
+
+Afficher "Saisir un texte à chercher"
+saisir recherche
+
+srcLen <- longueur(texteSrc)
+rechLen <- longueur(recherche)
+
+
+tant que cpt =< srcLen
+    si sousChaine(texteSrc,cpt,rechLen)=recherche
+            AlORS
+                si occur = 0
+                    ALORS
+                        indicePr <- cpt
+                        indiceDer <- cpt
+                    SINON 
+                        indiceDer <- cpt
+                finsi
+                occur <- occur + 1
+                cpt <- cpt + rechLen
+            SINON
+                cpt <- cpt+1
+            
+    fin si
+fin tantque
+
+si occur > 0 
+    ALORS
+    Afficher "Le caractère apparait ", occur, "fois"
+    Afficher "La position où il apparait la premiere fois est :", indicePr
+    Afficher "La position où il apparait la dernière fois est :", indiceDer
+    SINON
+    Afficher "Le caractère n'est pas compris dans le texte"
+finsi
+
+fin RechercheText
