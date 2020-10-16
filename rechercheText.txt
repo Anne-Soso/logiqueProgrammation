@@ -24,7 +24,7 @@ srcLen <- longueur(texteSrc)
 rechLen <- longueur(recherche)
 
 
-tant que cpt =< srcLen
+tant que cpt =< (srcLen-rechLen)
     si sousChaine(texteSrc,cpt,rechLen+1)=recherche
             AlORS
                 si occur = 0

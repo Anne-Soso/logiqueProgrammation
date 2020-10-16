@@ -1,0 +1,3 @@
+debut sousChaine
+
+fin sousChaine
