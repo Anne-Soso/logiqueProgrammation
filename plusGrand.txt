@@ -1,0 +1,40 @@
+début plusGrand
+    déclaration variables locales
+        var texte1 :T <- ""
+        var texte2 :T <- ""
+        var len1 :N <- 0
+        var len2 :N <- 0
+        var cpt :N <- 0
+        var continue :B <- VRAI
+        var resultat :B <- FAUX
+    fin variables locales
+
+    Afficher "Saisir un premier texte"
+    saisir texte1
+    len1 <- longueur(texte1)
+
+    Afficher "Saisir un deuxième texte"
+    saisir texte2
+    len2 <- longueur(texte2)
+
+    tant que continue
+        si(caract(texte1,cpt) > caract(texte2,cpt))
+            ALORS
+                resultat <- VRAI
+                continue <- FAUX
+            SINON 
+                si(caract(texte1,cpt) = caract(texte2,cpt))
+                    ALORS
+                        cpt <- cpt + 1
+                    SINON 
+                        resultat <- FAUX
+                        continue <- FAUX
+                    finsi
+        finsi
+
+    fin tantque
+
+    Afficher resultat
+
+
+fin plusGrand
