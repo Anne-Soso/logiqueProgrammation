@@ -8,6 +8,7 @@ début inversionCarac
 
     Afficher "Saisir un texte à inverser"
     saisir texteSrc
+    srcLen <- longueur(texteSrc)
 
     pour cpt allant de 1 à srcLen
         newText <- caract(texteSrc,cpt) (+) newText
