@@ -10,9 +10,7 @@ déclaration Variables Locales
     var replLen :N <- 0
 
     var cpt :N <- 0
-    var occur :N <- 0
-    var indicePr :N <- 0
-    var indiceDer :N <- 0
+
 
 fin Variables locales
 
