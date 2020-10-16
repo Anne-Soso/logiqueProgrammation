@@ -41,13 +41,6 @@ tant que cpt =< srcLen
     fin si
 fin tantque
 
-si occur > 0 
-    ALORS
-    Afficher "Le caractère apparait ", occur, "fois"
-    Afficher "La position où il apparait la premiere fois est :", indicePr
-    Afficher "La position où il apparait la dernière fois est :", indiceDer
-    SINON
-    Afficher "Le caractère n'est pas compris dans le texte"
-finsi
+Afficher texteSrc
 
 fin RechercheText
