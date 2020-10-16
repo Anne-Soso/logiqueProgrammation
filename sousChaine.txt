@@ -19,9 +19,9 @@ debut sousChaine
     Afficher "Saisir l'indice du dernier caractère"
     saisir fin
 
-    si depart < fin && fin =< srcLen
+    si depart <= fin && fin <= srcLen+1
         ALORS
-            pour cpt allant de depart à fin
+            pour cpt allant de depart à fin-1         // -1 > exclue la fin comme dans souchaine //
                 subString <- subString + caract(textSrc, cpt)
             cpt suivant
             Afficher subString

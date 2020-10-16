@@ -24,16 +24,14 @@ srcLen <- longueur(texteSrc)
 rechLen <- longueur(recherche)
 
 
-tant que cpt =< (srcLen-rechLen)
-    si sousChaine(texteSrc,cpt,rechLen+1)=recherche
+tant que cpt =< (srcLen-rechLen+1)
+    si sousChaine(texteSrc,cpt,cpt+rechLen)=recherche
             AlORS
                 si occur = 0
                     ALORS
                         indicePr <- cpt
-                        indiceDer <- cpt
-                    SINON 
-                        indiceDer <- cpt
                 finsi
+                indiceDer <- cpt
                 occur <- occur + 1
                 cpt <- cpt + rechLen
             SINON

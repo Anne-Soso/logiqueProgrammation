@@ -28,10 +28,11 @@ rechLen <- longueur(recherche)
 replLen <- longueur (replace)
 
 
-tant que cpt =< (srcLen-rechLen)
+tant que cpt =< (srcLen-rechLen+1)
     si sousChaine(texteSrc,cpt,rechLen+1)=recherche
             AlORS
-                texteSrc <- sousChaine(texteSrc, 1, cpt) (+) replace (+) sousChaine(texteSrc,cpt+replLen,srcLen+1) 
+                texteSrc <- sousChaine(texteSrc, 1, cpt) (+) replace (+) sousChaine(texteSrc,cpt+rechLen,srcLen+1) 
+                srcLen <- longueur(texteSrc)
                 cpt <- cpt + replLen
             SINON
                 cpt <- cpt+1
