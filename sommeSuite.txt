@@ -22,3 +22,5 @@ début sommeSuite
     Afficher somme
 
 fin sommeSuite
+
+Ajout test
