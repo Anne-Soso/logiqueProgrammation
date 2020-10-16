@@ -17,7 +17,9 @@ début plusGrand
     saisir texte2
     len2 <- longueur(texte2)
 
-    tant que continue
+
+
+    tant que continue && cpt <= len1 && cpt <= len2
         si(caract(texte1,cpt) > caract(texte2,cpt))
             ALORS
                 resultat <- VRAI
@@ -33,6 +35,16 @@ début plusGrand
         finsi
 
     fin tantque
+
+    si continue = VRAI
+        ALORS
+            si len1 > len2
+                ALORS
+                    resultat <- VRAI
+                SINON
+                    resultat <- FAUX
+            finsi
+    finsi
 
     Afficher resultat
 
