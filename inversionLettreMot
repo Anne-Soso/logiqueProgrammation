@@ -1,0 +1,27 @@
+début inversionLettreMot
+    déclaration variables locales
+        var texteSource :T <- ""
+        var srcLen :N <- 0
+        var newText :T <- ""
+        var newMot :T <- ""
+        var cpt :N <- 0
+        var i :N <- 0
+        var indiceLastSp :N <- 0
+    fin variables locales
+
+    Afficher "Saisir un texte dont il faudrait inverser les mots"
+    saisir texteSource
+    srcLen <- longueur(texteSource)
+
+    pour cpt allant de 1 à srcLen
+        si caract(texteSource,cpt) = " " 
+            ALORS
+                pour i allant de indiceLastSp+1 à cpt-1
+                    newMot <- caract(texteSource,i)(+)newMot
+                i suivant
+                newText <- newText (+) newMot (+) " "
+                indiceLastSp <- cpt
+        finsi
+    
+    cpt suivant
+fin inversionLettreMot
