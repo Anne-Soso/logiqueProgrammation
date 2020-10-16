@@ -1,0 +1,39 @@
+début RechercheCaract
+déclaration Variables Locales
+var cpt :N <- 0
+var texte :T <- ""
+var caract :C <- ''
+var txtLen :N <- 0
+var occur :N <- 0
+var indicePr :N <- 0
+var indiceDer :N <- 0
+fin Variables locales
+
+Afficher "Saisir un texte"
+saisir texte
+Afficher "Saisir un caractère"
+saisir caract
+txtLen <- longueur(texte)
+
+pour cpt allant de 1 à txtLen
+    si carac(texte,cpt)=caract
+        si occur = 0
+            ALORS
+            indicePr <- cpt
+            SINON 
+            indiceDer <- cpt
+        finsi
+        occur <- ocur + 1
+    fin si
+cpt suivant
+
+si occur > 0 
+    ALORS
+    Afficher "Le caractère apparait ", occur, "fois"
+    Afficher "La position où il apparait la premiere fois est :", indicePr
+    Afficher "La position où il apparait la dernière fois est :", indiceDer
+    SINON
+    Afficher "Le caractère n'est pas compris dans le texte"
+finsi
+
+fin RechercheCaract
