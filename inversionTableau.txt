@@ -17,3 +17,29 @@ début inversionTableau
     ind suivant
 
 fin inversionTableau
+
+/**************SANS 2 TABLEAUX**************/
+
+début inversionTableau
+    déclaration Variables Locales
+        const TAILLE:N <- 10
+        var tab:N[TAILLE]
+        var ind:N <- 0
+        var ind2:N <- TAILLE
+        var memory:N <- 0
+    fin Variables Locales
+
+    pour ind allant de 1 à TAILLE
+        saisir tab[ind]
+    ind suivant
+    
+    ind <- 1
+    tant que ind != ind2
+        memory <- tab[ind]
+        tab[ind]=tab[ind2]
+        tab[ind2] <- memory
+        ind <- ind + 1
+        ind2 <- ind - 1
+    fin tant que
+
+fin inversionTableau
