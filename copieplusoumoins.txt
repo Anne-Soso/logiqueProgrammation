@@ -6,13 +6,14 @@ début plusOuMoins
         var tab3:N[TAILLE]
         var ind:N <- 0
     fin Variables Locales
-    
-    tab3 <- tab1
+
 
     pour ind allant de 1 à TAILLE
         si !tab2[ind]
             ALORS
                 tab3[ind] <- -tab1[ind]
+            SINON
+                tab3[ind] <- tab1[ind]
         finsi
     ind suivant
 

@@ -8,7 +8,8 @@ début SommeSuivants
     fin variables locales
 
     pour ind allant de 1 à TAILLE
-        pour ind2 allant de ind à TAILLE
+        tab2[ind]<- tab1[ind]
+        pour ind2 allant de ind+1 à TAILLE
             tab2[ind] <- tab2[ind] + tab1[ind2] 
         ind2 suivant
     ind suivant
