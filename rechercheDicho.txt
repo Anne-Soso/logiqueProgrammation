@@ -1,0 +1,31 @@
+début rechercheDicho
+    déclaration variables locales
+        const TAILLE:N <- ...
+        var tab:N[TAILLE]
+        var ind:N <- 0
+        var début:N <- 0
+        var fin:N <- TAILLE
+        var trouve:B <- FAUX
+        var mil:N <- 0
+        var recherche:N <- 0
+    fin variables locales
+
+    saisir recherche
+
+    tant que !trouve et début < fin
+        mil <- (debut + fin ) DIV 2
+        si recherche=tab[mil] 
+            ALORS
+                trouve <- VRAI
+            SINON
+                si recherche < tab[mil]
+                    ALORS
+                        fin <- mil-1
+                    SINON
+                        debut <- mil+1
+                finsi
+        finsi
+    fin tant que
+
+
+fin rechercheDicho
