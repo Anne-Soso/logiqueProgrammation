@@ -17,7 +17,7 @@ début supprimerEspaces
         finsi
     ind suivant
 
-    pour ind allant de TAILLE à TAILLE-cpt par pas de -1
+    pour ind allant de TAILLE à TAILLE-cpt+1 par pas de -1
         tab[ind] <- " "
     ind suivant
 fin supprimerEspaces
