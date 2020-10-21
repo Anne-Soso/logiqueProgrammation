@@ -1,7 +1,7 @@
 début supprimerEspaces
     déclaration Variables Locales
         const TAILLE:N <- ...
-        var tab:N[TAILLE]
+        var tab:C[TAILLE]
         var ind:N <- 0
         var cptEs:N <- 0
     fin Variables Locales
