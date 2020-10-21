@@ -1,0 +1,19 @@
+début inversionTableau
+    déclaration Variables Locales
+        const TAILLE:N <- 10
+        var tab:N[TAILLE]
+        var tab2:N[TAILLE]
+        var ind:N <- 0
+        var ind2:N <- TAILLE
+    fin Variables Locales
+
+    pour ind allant de 1 à TAILLE
+        saisir tab[ind]
+    ind suivant
+
+    pour ind allant de 1 à TAILLE
+        tab2[ind2] <- tab[ind]
+        ind2 <- ind2 - 1
+    ind suivant
+
+fin inversionTableau
