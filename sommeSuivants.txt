@@ -1,0 +1,15 @@
+début SommeSuivants
+    déclaration variables locales
+        const TAILLE:N <- ...
+        var tab1:N[TAILLE]
+        var tab2:N[TAILLE]
+        var ind:N <- 0
+        var ind2:N <- 0
+    fin variables locales
+
+    pour ind allant de 1 à TAILLE
+        pour ind2 allant de ind à TAILLE
+            tab2[ind] <- tab2[ind] + tab1[ind2] 
+        ind2 suivant
+    ind suivant
+fin SommeSuivants
