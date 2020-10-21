@@ -26,6 +26,11 @@ début rechercheDicho
                 finsi
         finsi
     fin tant que
-
-
+    si trouve
+        ALORS
+            Afficher "la valeur ",recherche, "se trouve à la position", mil
+        SINON
+            Afficher "la valeur n'a pas été trouvée, elle pourrait se trouver à la position" ,mil
+    finsi
+    Afficher mil 
 fin rechercheDicho
