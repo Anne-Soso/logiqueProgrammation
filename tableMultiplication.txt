@@ -1,0 +1,13 @@
+début tableMultiplication
+    déclaration variables locales
+        var i:N <- 0
+        var j:N <- 0
+    fin variables locales
+
+    pour i allant de 1 à 10
+        pour j allant de 1 à 10
+            Afficher i, " * ", j, " = ",i*j
+        j suivant
+    i suivant
+
+fin tableMultiplication
