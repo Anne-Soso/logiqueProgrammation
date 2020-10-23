@@ -1,0 +1,51 @@
+début carréMagique
+    déclaration variables locales
+        const TAILLE:N <- 10
+        var tab:N[TAILLE,TAILLE]
+        var i:N <- 0
+        var j:N <- 0
+        var somme:N <- 0
+        var somme2:N <- 0
+        var comp:N <- 0
+        var diff:B <- FAUX
+
+    fin variables locales
+
+    pour i allant de 1 à TAILLE
+        comp <- comp + tab[i,TAILLE-i+1];
+    i suivant
+
+    pour i allant de 1 à TAILLE
+        somme <- somme + tab[i,i] 
+    i suivant
+    si somme != comp
+        ALORS
+            diff <- VRAI
+    finsi
+
+    tant que !diff et i <= TAILLE
+        somme <- 0
+        somme2 <- 0
+
+        pour j allant de 1 à TAILLE
+            somme <- somme + tab[i,j]
+            somme2 <- somme2 + tab[j,i]
+        j suivant
+
+        si somme != comp ou somme2 != comp
+            ALORS
+                diff <- VRAI
+        finsi
+        i <- i+1
+    fin tantque
+
+    si diff 
+        ALORS
+            Afficher "ce n'est pas un carré magique"
+        SINON
+            Afficher "c'est un carré Magique"
+    finsi
+
+
+
+fin carréMagique
