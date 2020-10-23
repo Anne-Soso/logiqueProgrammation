@@ -1,0 +1,15 @@
+début diagonales carré
+    déclaration variables locales
+        const TAILLE:N <- 0
+        var carré:N[TAILLE,TAILLE]
+        var i:N <- 0
+    fin variables locales
+
+    pour i allant de 1 à TAILLE
+        carré[i,i] <- 1
+    i suivant
+
+    pour i allant de TAILLE à 1 par pas de -1
+        carré[TAILLE-i+1,i] <- 2
+    i suivant
+fin diagonales carré
