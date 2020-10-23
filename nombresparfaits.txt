@@ -12,7 +12,6 @@ début nombres parfaits
                 ALORS
                     somme <- somme + cpt2
             finsi
-            somme
         cpt2 suivant
         si somme = cpt
             ALORS
