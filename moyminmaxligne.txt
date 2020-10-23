@@ -1,0 +1,35 @@
+début moyMinMaxLigne
+    déclaration variables locales
+        const HAUTEUR:N <- 6
+        const LARGEUR:N <- 5
+        var tab:N[HAUTEUR,LARGEUR]
+        var moy:N <- 0
+        var max:N <- 0
+        var min:N <- 0
+        var i:N <- 0
+        var j:N <- 0
+    fin variables locales
+
+    pour i allant de 1 à HAUTEUR
+        moy <- tab[i,1]
+        min <- tab[i,1]
+        max <- tab[i,1]
+        
+        pour j allant de 2 à LARGEUR
+            moy <- moy + tab[i,j]
+            si tab[i,j] > max
+                ALORS
+                    max <- tab[i,j]
+                SINON
+                    si tab[i,j] < min
+                        ALORS
+                            min <- tab[i,j]
+                    finsi
+            finsi
+        j suivant
+        Afficher "la moyenne de la ligne ", i, "est", moy/LARGEUR
+        Afficher "le minimum de la ligne ", i ,"est", min
+        Afficher "le maximum de la ligne ", i ,"est", max
+    i suivant
+
+fin moyMinMaxLigne
