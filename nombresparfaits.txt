@@ -1,0 +1,22 @@
+début nombres parfaits
+    déclaration variables locales
+      var cpt:N <- 0
+      var cpt2:N <- 0
+      var somme:N <- 0
+    fin variables locales
+    
+    pour cpt allant de 2 à 100
+        sommme <- 1
+        pour cpt2  allant de 2 à cpt DIV 2
+            si cpt%cpt2=0
+                ALORS
+                    somme <- somme + cpt2
+            finsi
+            somme
+        cpt2 suivant
+        si somme = cpt
+            ALORS
+                Afficher cpt
+        finsi
+    cpt suivant
+fin nombres parfaits
