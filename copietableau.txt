@@ -1,0 +1,23 @@
+
+
+/************deux variables*****************/
+
+début copie tableau
+    déclaration variables locales
+        const TAILLE:N <- 20
+        const HAUTEUR:N <- 4
+        const LARGEUR:N <- 5
+        var tab1:N[TAILLE]
+        var tab2:N[HAUTEUR,LARGEUR]
+        var h:N <- 0
+        var l:N <- 0
+    fin variables locales
+
+    pour h allant de 1 à HAUTEUR
+        pour l allant de 1 à LARGEUR
+            tab[(h-1)*LARGEUR+l] <- tab[h,l]
+        l suivant
+    h suivant
+
+fin copie tableau
+
