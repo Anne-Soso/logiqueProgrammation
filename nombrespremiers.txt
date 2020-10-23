@@ -1,6 +1,6 @@
 début nombres premiers
     déclaration variables locales
-        var cpt :N <- 4 
+        var cpt :N <- 5 
         var cpt2 :N <- 0 // nombre de nombres premiers
         var i:N <- 0 // diviseurs
     fin variables locales
@@ -10,16 +10,16 @@ début nombres premiers
     cpt2 <- cpt2 + 2
 
     tant que cpt2 < 100
-        i <- 2
-        tant que (cpt % i != 0) et (i < cpt DIV 2)
-            i <- i + 1
+        i <- 3
+        tant que (cpt % i != 0) et (i * i < cpt))
+            i <- i + 2
         fin tantque
         si (cpt%i != 0)
             ALORS
                 cpt2 <- cpt2 + 1
                 Afficher cpt
         finsi
-        cpt <- cpt +1
+        cpt <- cpt +2
     fin tantque
 
 fin nombres premiers
