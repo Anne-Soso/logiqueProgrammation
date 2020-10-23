@@ -1,0 +1,24 @@
+début nombres premiers
+    déclaration variables locales
+        var cpt :N <- 4 
+        var cpt2 :N <- 2 // nombre de nombres premiers
+        var i:N <- 0 // diviseurs
+    fin variables locales
+
+    Afficher "2"
+    Afficher "3"
+
+    tant que cpt2 <= 100
+        i <- 2
+        tant que (cpt % i != 0) et (i < cpt DIV 2)
+            i <- i + 1
+        fin tantque
+        si (cpt%i != 0)
+            ALORS
+                cpt2 <- cpt2 + 1
+                Afficher cpt
+        finsi
+        cpt <- cpt +1
+    fin tantque
+
+fin nombres premiers
